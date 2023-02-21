@@ -6,15 +6,15 @@
 /*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 13:36:18 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/02/21 01:08:02 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/02/15 19:17:55 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_strcmp(char *s1, char *s2)
+int ft_strcmp(char *s1, char *s2)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	while (s1[i] == s2[i])

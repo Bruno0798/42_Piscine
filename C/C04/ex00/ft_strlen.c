@@ -14,23 +14,19 @@
 
 int ft_strlen(char *str)
 {
-    unsigned int i;
+    int i;
 
     i = 0;
-
-    while(str[i] != '\0')
+    while (str[i] != '\0')
     {
         i++;
     }
-    return(i);
+    return (i);
 }
-
-
-
 
 int main(void)
 {
-    char teste[] = "ola bom";
+    char teste[] = "ola buom";
     printf("%i", ft_strlen(teste));
     return 0;
 }
