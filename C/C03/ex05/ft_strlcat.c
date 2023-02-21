@@ -6,7 +6,7 @@
 /*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:38:50 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/02/21 01:12:47 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/02/21 01:17:15 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,20 +51,20 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 // int main(void)
 // {
 // 	char first[] = "This is ";
-//     char last[] = "a potentially long string";
-//     int r;
-//     int size = 15;
-//     char buffer[size];
+// 	char last[] = "a potentially long string";
+// 	int r;
+// 	int size = 15;
+// 	char buffer[size];
 
-// 	strcpy(buffer,first);
-// 	r = ft_strlcat(buffer,last,size);
+// 	strcpy(buffer, first);
+// 	r = ft_strlcat(buffer, last, size);
 
 // 	puts(buffer);
-//     printf("Value returned: %d\n",r);
-//     if( r > size )
-//         printf("String truncated");
-//     else
-//         printf("String was fully copied");
+// 	printf("Value returned: %d\n", r);
+// 	if (r > size)
+// 		printf("String truncated");
+// 	else
+// 		printf("String was fully copied");
 
-//     return(0);
+// 	return(0);
 // }
