@@ -6,16 +6,16 @@
 /*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:38:50 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/02/17 12:43:38 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/02/21 01:12:47 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	while (str[len] != '\0')
@@ -25,12 +25,12 @@ int ft_strlen(char *str)
 	return (len);
 }
 
-unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	unsigned int dlen;
-	unsigned int slen;
-	unsigned int i;
-	unsigned int j;
+	unsigned int	dlen;
+	unsigned int	slen;
+	unsigned int	i;
+	unsigned int	j;
 
 	dlen = ft_strlen(dest);
 	slen = ft_strlen(src);
