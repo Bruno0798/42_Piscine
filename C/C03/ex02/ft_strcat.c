@@ -1,32 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/17 13:00:05 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/02/17 13:04:40 by bsousa-d         ###   ########.fr       */
+/*   Created: 2023/02/16 01:51:46 by bsousa-d          #+#    #+#             */
+/*   Updated: 2023/02/16 02:01:23 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int ft_strlen(char *str)
+char *ft_strcat(char *dest, char *src)
 {
-    int i;
+	unsigned int i;
+	unsigned int j;
 
-    i = 0;
-    while (str[i] != '\0')
-    {
-        i++;
-    }
-    return (i);
+	i = 0;
+	j = 0;
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
 
-int main(void)
-{
-    char teste[] = "ola buom";
-    printf("%i", ft_strlen(teste));
-    return 0;
-}
+// int main(void)
+// {
+// 	char teste[] = "teste";
+// 	char testee[] = "olaa";
+
+// 	printf("%s", ft_strcat(teste, testee));
+// 	return 0;
+// }

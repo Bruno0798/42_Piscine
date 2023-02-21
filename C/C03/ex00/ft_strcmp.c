@@ -1,32 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/17 13:00:05 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/02/17 13:04:40 by bsousa-d         ###   ########.fr       */
+/*   Created: 2023/02/15 13:36:18 by bsousa-d          #+#    #+#             */
+/*   Updated: 2023/02/15 19:17:55 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int ft_strlen(char *str)
+int ft_strcmp(char *s1, char *s2)
 {
-    int i;
+	int i;
 
-    i = 0;
-    while (str[i] != '\0')
-    {
-        i++;
-    }
-    return (i);
+	i = 0;
+	while (s1[i] == s2[i])
+	{
+		if (s1[i] == '\0' || s2[i] == '\0')
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (s1[i] - s2[i]);
 }
 
-int main(void)
+/*int main(int argc, char const *argv[])
 {
-    char teste[] = "ola buom";
-    printf("%i", ft_strlen(teste));
-    return 0;
-}
+	char str1[] = {"olaaaaa"};
+	char str2[] = {"olaaaa"};
+	int imprime;
+	imprime = ft_strcmp(str1, str2);
+	printf("%i", imprime);
+	return 0;
+}*/

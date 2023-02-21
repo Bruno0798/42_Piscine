@@ -1,32 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/17 13:00:05 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/02/17 13:04:40 by bsousa-d         ###   ########.fr       */
+/*   Created: 2023/02/16 02:02:20 by bsousa-d          #+#    #+#             */
+/*   Updated: 2023/02/16 13:29:51 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int ft_strlen(char *str)
+char *ft_strncat(char *dest, char *src, unsigned int nb)
 {
-    int i;
+    unsigned int i;
+    unsigned int j;
 
     i = 0;
-    while (str[i] != '\0')
+    j = 0;
+    while (dest[i] != '\0')
     {
         i++;
     }
-    return (i);
+    while (j < nb && src[j] != '\0')
+    {
+        dest[i] = src[j];
+        j++;
+        i++;
+    }
+    dest[i] = '\0';
+    return dest;
 }
 
 int main(void)
 {
-    char teste[] = "ola buom";
-    printf("%i", ft_strlen(teste));
-    return 0;
+    char first[] = "ola";
+    char second[] = " bom dia";
+    printf("%s", ft_strncat(first, second, 4));
+    return (0);
 }
