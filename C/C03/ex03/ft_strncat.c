@@ -16,15 +16,14 @@ char *ft_strncat(char *dest, char *src, unsigned int nb)
 {
     unsigned int i;
     unsigned int j;
-    i=0;
+
+    i = 0;
     j = 0;
-
-
-    while(dest[i] != '\0')
+    while (dest[i] != '\0')
     {
         i++;
     }
-    while(j < nb)
+    while (j < nb && src[j] != '\0')
     {
         dest[i] = src[j];
         j++;
@@ -38,6 +37,6 @@ int main(void)
 {
     char first[] = "ola";
     char second[] = " bom dia";
-    printf("%s", ft_strncat(first, second, 8));
+    printf("%s", ft_strncat(first, second, 4));
     return (0);
 }

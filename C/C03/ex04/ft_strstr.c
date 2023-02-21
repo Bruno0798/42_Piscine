@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// #include <stdio.h>
 char *ft_strstr(char *str, char *to_find)
 {
     unsigned int i;
@@ -26,23 +26,23 @@ char *ft_strstr(char *str, char *to_find)
         j = 0;
         while (str[i + j] != '\0' && str[i + j] == to_find[j])
         {
-            if (to_find[j+1] == '\0')
+            if (to_find[j + 1] == '\0')
             {
                 return (&str[i]);
             }
-        j++;
+            j++;
         }
         i++;
     }
-return (0);
-}
-
-int main(void)
-{
-    char s1[] = "ola bom dia";
-    char s2[] = "d";
-    char *p = ft_strstr(s1, s2);
-
-    printf("First occurrence of string '%s' in '%s' is '%s'", s2, s1, p);
     return (0);
 }
+
+// int main(void)
+// {
+//     char s1[] = "ola bom dia";
+//     char s2[] = "d";
+//     char *p = ft_strstr(s1, s2);
+
+//     printf("First occurrence of string '%s' in '%s' is '%s'", s2, s1, p);
+//     return (0);
+// }

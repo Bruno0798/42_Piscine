@@ -10,46 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-int	ft_strlen(char *str)
+#include <stdio.h>
+
+int ft_strcmp(char *s1, char *s2)
 {
-	int	i;
+	int i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s1[i] == s2[i])
 	{
+		if (s1[i] == '\0' || s2[i] == '\0')
+		{
+			return (0);
+		}
 		i++;
 	}
-	return (i);
+	return (s1[i] - s2[i]);
 }
 
-int	ft_strcmp(char *s1, char *s2)
+/*int main(int argc, char const *argv[])
 {
-	int	cont1;
-	int	cont2;
-
-	cont1 = ft_strlen(s1);
-	cont2 = ft_strlen(s2);
-	if (cont1 < cont2)
-	{
-		return (-1);
-	}
-	if (cont1 == cont2)
-	{
-		return (0);
-	}
-	else
-	{
-		return (1);
-	}
-}
-
-// int main(int argc, char const *argv[])
-// {
-// 	char str1[] = { "olaaaaaa" };
-// 	char str2[] = { "olaaaaaaa" };
-// 	int imprime;
-// 	imprime = ft_strcmp(str1, str2);
-// 	printf("%i", imprime);
-// 	return 0;
-// }
+	char str1[] = {"olaaaaa"};
+	char str2[] = {"olaaaa"};
+	int imprime;
+	imprime = ft_strcmp(str1, str2);
+	printf("%i", imprime);
+	return 0;
+}*/

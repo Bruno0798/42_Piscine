@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// #include <stdio.h>
 
 char *ft_strcat(char *dest, char *src)
 {
@@ -18,12 +18,12 @@ char *ft_strcat(char *dest, char *src)
 	unsigned int j;
 
 	i = 0;
-	j =0;
-	while(dest[i] != '\0')
+	j = 0;
+	while (dest[i] != '\0')
 	{
 		i++;
 	}
-	while(src[j] != '\0')
+	while (src[j] != '\0')
 	{
 		dest[i] = src[j];
 		i++;
@@ -33,11 +33,11 @@ char *ft_strcat(char *dest, char *src)
 	return (dest);
 }
 
-int main(void)
-{
-	char teste[] = "teste";
-	char testee[] = "olaa";
+// int main(void)
+// {
+// 	char teste[] = "teste";
+// 	char testee[] = "olaa";
 
-	printf("%s", ft_strcat(teste, testee));
-	return 0;
-}
+// 	printf("%s", ft_strcat(teste, testee));
+// 	return 0;
+// }
